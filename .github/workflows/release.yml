@@ -44,7 +44,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: binaries-${{ matrix.goos }}-${{ matrix.goarch }}
+          name: drudge-${{ matrix.goos }}-${{ matrix.goarch }}
           path: bin/*
 
   release:
