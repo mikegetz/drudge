@@ -24,5 +24,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Error parsing", err)
 	}
-	client.PrintHeadlines()
+	client.PrintDrudge()
 }

@@ -2,7 +2,7 @@ module github.com/MGuitar24/drudge
 
 go 1.23.3
 
-require github.com/MGuitar24/godrudge v0.0.0-20250212051705-6282d1cc4734
+require github.com/MGuitar24/godrudge v1.0.1
 
 require (
 	github.com/PuerkitoBio/goquery v1.10.1 // indirect
