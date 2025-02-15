@@ -14,12 +14,15 @@ func main() {
 	stringArg := false
 	if len(os.Args) > 1 {
 		flag := os.Args[1]
-		if flag == "-v" {
+		switch flag {
+		case "-v":
 			fmt.Println("Version:", Version)
 			os.Exit(0)
-		}
-		if flag == "-s" {
+		case "-s":
 			stringArg = true
+		case "-h":
+			printHelp()
+			os.Exit(0)
 		}
 	}
 
@@ -29,4 +32,12 @@ func main() {
 		fmt.Println("Error parsing", err)
 	}
 	client.PrintDrudge(stringArg)
+}
+
+func printHelp() {
+	fmt.Println("Usage: drudge [options]")
+	fmt.Println("Options:")
+	fmt.Println("  -v        Print the version and exit")
+	fmt.Println("  -s        Print the output as a string")
+	fmt.Println("  -h        Print this help menu and exit")
 }
