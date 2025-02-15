@@ -11,11 +11,15 @@ import (
 var Version = "dev" // Default value for local builds
 
 func main() {
+	stringArg := false
 	if len(os.Args) > 1 {
 		flag := os.Args[1]
 		if flag == "-v" {
 			fmt.Println("Version:", Version)
 			os.Exit(0)
+		}
+		if flag == "-s" {
+			stringArg = true
 		}
 	}
 
@@ -24,5 +28,5 @@ func main() {
 	if err != nil {
 		fmt.Println("Error parsing", err)
 	}
-	client.PrintDrudge()
+	client.PrintDrudge(stringArg)
 }
