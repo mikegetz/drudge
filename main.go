@@ -91,4 +91,5 @@ func printHelp() {
 	fmt.Println("  -v        Print the version and exit")
 	fmt.Println("  -s        Print the output as a string")
 	fmt.Println("  -h        Print this help menu and exit")
+	fmt.Println("  -w [n]    Watch for updates every n seconds (default is 30 seconds)")
 }
