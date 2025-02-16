@@ -3,7 +3,7 @@ module github.com/MGuitar24/drudge
 go 1.24.0
 
 require (
-	github.com/MGuitar24/godrudge v1.1.4
+	github.com/MGuitar24/godrudge v1.1.6
 	github.com/mmcdole/gofeed v1.3.0
 )
 
