@@ -42,7 +42,7 @@ func main() {
 
 func runAndPrint(stringArg bool) {
 	client := godrudge.NewClient()
-	err := client.Parse()
+	err := client.ParseRSS()
 	if err != nil {
 		fmt.Println("Error parsing", err)
 	}
