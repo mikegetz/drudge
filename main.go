@@ -88,8 +88,8 @@ func startWatch(refreshInterval int) {
 func printHelp() {
 	fmt.Println("Usage: drudge [options]")
 	fmt.Println("Options:")
-	fmt.Println("  -v        Print the version and exit")
+	fmt.Println("  -v        Print the version")
 	fmt.Println("  -s        Print the output as a string")
-	fmt.Println("  -h        Print this help menu and exit")
+	fmt.Println("  -h        Print this help menu")
 	fmt.Println("  -w [n]    Watch for updates every n seconds (default is 30 seconds)")
 }
