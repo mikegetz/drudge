@@ -18,12 +18,16 @@ sh -c "$(wget -qO- https://raw.githubusercontent.com/mikegetz/drudge/main/tools/
 A CLI that prints the drudge page headlines to stdout 
 
 ```
-Usage: drudge [options]
-Options:
-  -v        Print the version
-  -s        Print the output as a string
-  -h        Print this help menu
-  -w [n]    Watch for updates every n seconds (default is 30 seconds)
-  ```
+func printHelp() {
+	fmt.Println("Usage: drudge [options]")
+	fmt.Println("Options:")
+	fmt.Println("  -v        Print the version")
+	fmt.Println("  -s        Print the output as a without ANSI Escaped links")
+	fmt.Println("  -h        Print this help menu")
+	fmt.Println("  -w [n]    Watch for updates every n seconds (default is 30 seconds)")
+	fmt.Println("  -r        Parse RSS feed")
+	fmt.Println("  -d        Parse DOM")
+}
+```
 
 ![image](https://github.com/user-attachments/assets/6f7185ba-aa63-42cc-b456-0ea4c1055add)

@@ -16,6 +16,7 @@ var Version = "dev" // Default value for local builds
 
 func main() {
 	stringArg := false
+	parserArg := ""
 	if len(os.Args) > 1 {
 		flag := os.Args[1]
 		switch flag {
@@ -24,6 +25,10 @@ func main() {
 			os.Exit(0)
 		case "-s":
 			stringArg = true
+		case "-r":
+			parserArg = os.Args[1]
+		case "-d":
+			parserArg = os.Args[1]
 		case "-h":
 			printHelp()
 			os.Exit(0)
@@ -37,15 +42,29 @@ func main() {
 			select {}
 		}
 	}
-	runAndPrint(stringArg)
+	runAndPrint(stringArg, parserArg)
 }
 
-func runAndPrint(stringArg bool) {
+func runAndPrint(stringArg bool, parserArg string) {
 	client := godrudge.NewClient()
-	err := client.ParseRSS()
-	if err != nil {
-		fmt.Println("Error parsing", err)
+	switch parserArg {
+	case "-r":
+		err := client.ParseRSS()
+		if err != nil {
+			fmt.Println("Error parsing RSS", err)
+		}
+	case "-d":
+		err := client.ParseDOM()
+		if err != nil {
+			fmt.Println("Error parsing DOM", err)
+		}
+	default:
+		err := client.ParseRSS()
+		if err != nil {
+			fmt.Println("Error parsing RSS", err)
+		}
 	}
+
 	client.PrintDrudge(stringArg)
 }
 
@@ -63,7 +82,7 @@ func startWatch(refreshInterval int) {
 					// Only print new items
 					for _, item := range feed.Items {
 						if item.PublishedParsed != nil && (latestPublishedTime == nil || item.PublishedParsed.After(*latestPublishedTime)) {
-							runAndPrint(false)
+							runAndPrint(false, "-r")
 							if latestPublishedTime == nil {
 								fmt.Println("Waiting for update from Drudge...")
 							} else {
@@ -89,7 +108,9 @@ func printHelp() {
 	fmt.Println("Usage: drudge [options]")
 	fmt.Println("Options:")
 	fmt.Println("  -v        Print the version")
-	fmt.Println("  -s        Print the output as a string")
+	fmt.Println("  -s        Print the output as a without ANSI Escaped links")
 	fmt.Println("  -h        Print this help menu")
 	fmt.Println("  -w [n]    Watch for updates every n seconds (default is 30 seconds)")
+	fmt.Println("  -r        Parse RSS feed")
+	fmt.Println("  -d        Parse DOM")
 }
