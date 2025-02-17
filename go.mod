@@ -1,9 +1,9 @@
-module github.com/MGuitar24/drudge
+module github.com/mikegetz/drudge
 
 go 1.24.0
 
 require (
-	github.com/MGuitar24/godrudge v1.2.0
+	github.com/mikegetz/godrudge v1.2.1
 	github.com/mmcdole/gofeed v1.3.0
 )
 

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/MGuitar24/godrudge"
+	"github.com/mikegetz/godrudge"
 	"github.com/mmcdole/gofeed"
 )
 
