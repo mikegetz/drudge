@@ -3,7 +3,7 @@
 ### Homebrew
 ```
 brew tap mikegetz/drudge
-brew install mikegetz/drudge/drudge
+brew install drudge
 ```
 ### Shell
 #### curl
