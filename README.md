@@ -1,4 +1,10 @@
 # drudge
+## Install
+```
+brew tap mikegetz/drudge
+brew install mikegetz/drudge/drudge
+```
+## Usage
 A CLI that prints the drudge page headlines to stdout 
 
 ```
