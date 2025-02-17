@@ -1,8 +1,18 @@
 # drudge
 ## Install
+### Homebrew
 ```
 brew tap mikegetz/drudge
 brew install mikegetz/drudge/drudge
+```
+### Shell
+#### curl
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/mikegetz/drudge/main/tools/install.sh)"
+```
+#### wget
+```
+sh -c "$(wget -qO- https://raw.githubusercontent.com/mikegetz/drudge/main/tools/install.sh)"
 ```
 ## Usage
 A CLI that prints the drudge page headlines to stdout 
