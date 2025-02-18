@@ -3,7 +3,7 @@ module github.com/mikegetz/drudge
 go 1.24.0
 
 require (
-	github.com/mikegetz/godrudge v1.2.1
+	github.com/mikegetz/godrudge v1.3.0
 	github.com/mmcdole/gofeed v1.3.0
 )
 

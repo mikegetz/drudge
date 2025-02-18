@@ -111,6 +111,6 @@ func printHelp() {
 	fmt.Println("  -s        Print the output as a without ANSI Escaped links")
 	fmt.Println("  -h        Print this help menu")
 	fmt.Println("  -w [n]    Watch for updates every n seconds (default is 30 seconds)")
-	fmt.Println("  -r        Parse RSS feed")
+	fmt.Println("  -r        Parse RSS feed (default)")
 	fmt.Println("  -d        Parse DOM")
 }

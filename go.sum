@@ -11,6 +11,8 @@ github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnr
 github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
 github.com/mikegetz/godrudge v1.2.1 h1:5q7aMYnltmcKI/r1rYaa1XK7+iBE1sSnwGSQLhUYpzQ=
 github.com/mikegetz/godrudge v1.2.1/go.mod h1:Ji691R6zdoLIBaT9lmw4Es2gDRO29UdcQ7v5/I6YFUg=
+github.com/mikegetz/godrudge v1.3.0 h1:F2OuAWIk4zqZsqUX3De8qiLtT4lhEDCxchQgH1aNCNs=
+github.com/mikegetz/godrudge v1.3.0/go.mod h1:Ji691R6zdoLIBaT9lmw4Es2gDRO29UdcQ7v5/I6YFUg=
 github.com/mmcdole/gofeed v1.3.0 h1:5yn+HeqlcvjMeAI4gu6T+crm7d0anY85+M+v6fIFNG4=
 github.com/mmcdole/gofeed v1.3.0/go.mod h1:9TGv2LcJhdXePDzxiuMnukhV2/zb6VtnZt1mS+SjkLE=
 github.com/mmcdole/goxpp v1.1.1 h1:RGIX+D6iQRIunGHrKqnA2+700XMCnNv0bAOOv5MUhx8=
