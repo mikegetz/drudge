@@ -1,4 +1,5 @@
 # drudge
+A CLI that prints the drudge page headlines to stdout 
 ## Install
 ### Homebrew
 ```
@@ -15,7 +16,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/mikegetz/drudge/main/tools
 sh -c "$(wget -qO- https://raw.githubusercontent.com/mikegetz/drudge/main/tools/install.sh)"
 ```
 ## Usage
-A CLI that prints the drudge page headlines to stdout 
 
 ```
 func printHelp() {
