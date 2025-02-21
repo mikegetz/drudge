@@ -69,7 +69,7 @@ func runAndPrint(stringArg bool, parserArg string) {
 }
 
 func startWatch(refreshInterval int) {
-	const rssURL = "http://feeds.feedburner.com/DrudgeReportFeed"
+	const rssURL = "http://feeds.feedburner.com/DrudgeReportFeed" //mirror of https://drudgereportfeed.com/
 	var latestPublishedTime *time.Time
 	go func() {
 		for {
@@ -86,8 +86,9 @@ func startWatch(refreshInterval int) {
 							if latestPublishedTime == nil {
 								fmt.Println("Waiting for update from Drudge...")
 							} else {
+								fmt.Println("Article updated at: " + latestPublishedTime.String())
 								currentTime := time.Now().Format("Mon, 02 Jan 2006 03:04:05 PM MST")
-								fmt.Println(currentTime)
+								fmt.Println("Observed at: " + currentTime)
 							}
 							latestPublishedTime = item.PublishedParsed
 							break
@@ -108,7 +109,7 @@ func printHelp() {
 	fmt.Println("Usage: drudge [options]")
 	fmt.Println("Options:")
 	fmt.Println("  -v        Print the version")
-	fmt.Println("  -s        Print the output as a without ANSI Escaped links")
+	fmt.Println("  -s        Print the output as text without ANSI Escaped links")
 	fmt.Println("  -h        Print this help menu")
 	fmt.Println("  -w [n]    Watch for updates every n seconds (default is 30 seconds)")
 	fmt.Println("  -r        Parse RSS feed (default)")
